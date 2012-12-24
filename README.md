@@ -8,19 +8,19 @@ The story world is based on a homework assignment created by Piper Jackson at Si
 The world is currently setup as a graph of doubly connected nodes, you may change the world by altering the values of `connected(A, B)` in the sourcecode.
 
 ### Usage
-    story([get(hero, treasure), move(hero, home)], S, [at(hero, home), at(treasure, dungeon)], W).
+    story([get(hero, treasure), move(hero, home)], A, [at(hero, home), at(treasure, dungeon)], W).
 
 ### Example Output
-    S = [travel(hero, home, forest), travel(hero, forest, dungeon), take(hero, treasure), travel(hero, dungeon, mountains), travel(hero, mountains, home)],
+    A = [travel(hero, home, forest), travel(hero, forest, dungeon), take(hero, treasure), travel(hero, dungeon, mountains), travel(hero, mountains, home)],
     W = [at(hero, home), has(hero, treasure)].
 
 
-The first parameter represents the initial actions we wish to perform and the second parameter, `s`, will contain the actions performed to achieve our goal actions.
+The first parameter represents the goal state we wish to achieve and the second parameter, `a`, will contain the actions performed to achieve our goal actions.
 
 The latter two parameters serve as the world state before and the world state after the transformations, `w`.
 
 ### Verbose Output
-You may use `storify(ACTIONS, STATES).` for more verbose output.
+You may use `storify(GOAL, START).` for more verbose output.
 
 Available Actions
 ----------------
@@ -36,4 +36,4 @@ These are either true or false.
 
 Testing
 -------
-To run the default test case, call `test(S, W).`
+To run the default test case, call `test(A, W).` or `test_storify.`

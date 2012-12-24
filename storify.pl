@@ -1,9 +1,9 @@
 % Story Generator w/ Scary Dungeon
 % Anton Samson anton@antonsamson.com
 %
-% Please use "storify(ACTIONS, STATES)." for text output.
+% Please use "storify(GOAL, START_STATE)." for text output.
 %
-% You can also call "test(S, W)." for the default test case.
+% You can also call "test(A, W)." for the default test case.
 
 % Setup
 connected(dungeon, forest).
@@ -178,4 +178,5 @@ storify(G, S) :-
 	tell(W), !.
 
 % Default test case.
-test(S, W) :- story([get(hero, treasure), move(hero, home)], S, [at(hero, home), at(treasure, dungeon)], W).
+test(A, W) :- story([get(hero, treasure), move(hero, home)], A, [at(hero, home), at(treasure, dungeon)], W).
+test_storify :- storify([get(hero, treasure), move(hero, home)], [at(hero, home), at(treasure, dungeon)]).
