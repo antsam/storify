@@ -137,34 +137,55 @@ tell([H|T]) :-
 tell([X]) :- tell(X).
 
 tell(take(P, I)) :-
-	write(P),
-	write(' takes the '),
-	write(I),
+	tell(P),
+	write(' takes '),
+	tell(I),
 	write(' in triumph!'),
 	nl.
 
 tell(travel(P, L, D)) :-
-	write(P),
+	tell(P),
 	write(' travels from '),
-	write(L),
+	tell(L),
 	write(' to '),
-	write(D),
+	tell(D),
 	write('.'),
 	nl.
 
 tell(at(O, L)) :-
-	write(O),
+	tell(O),
 	write(' is at '),
-	write(L),
+	tell(L),
 	write('.'),
 	nl.
 
 tell(has(P, O)) :-
-	write(P),
-	write(' has the '),
-	write(O),
+	tell(P),
+	write(' has '),
+	tell(O),
 	write('.'),
 	nl.
+
+tell(hero) :-
+        write('our hero').
+
+tell(treasure) :-
+        write('the fabulous treasure').
+
+tell(dungeon) :-
+        write('the forbidden dungeon').
+
+tell(forest) :-
+        write('the enchanted forest').
+
+tell(mountains) :-
+        write('mountains of madness').
+
+tell(lake) :-
+        write('bottomless lake').
+
+tell(home) :-
+        write('his home').
 
 tell(_).
 
