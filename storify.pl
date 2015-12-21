@@ -179,10 +179,10 @@ tell(forest) :-
         write('the enchanted forest').
 
 tell(mountains) :-
-        write('mountains of madness').
+        write('the mountains of madness').
 
 tell(lake) :-
-        write('bottomless lake').
+        write('the bottomless lake').
 
 tell(home) :-
         write('his home').
